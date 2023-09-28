@@ -1,9 +1,10 @@
 ﻿using eticaret34.Dto.AppUserDto;
 using eticaret34.Models;
+using MailKit.Net.Smtp;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using MimeKit;
-using System.Net.Mail;
+
 
 namespace eticaret34.Controllers
 {
@@ -57,7 +58,7 @@ namespace eticaret34.Controllers
 					SmtpClient client = new SmtpClient();
                     
 					client.Connect("smtp.gmail.com", 587, false);
-					client.Authenticate("projekursapi@gmail.com", "btfcoirevejxphfr");
+					client.Authenticate("muratciplak917@gmail.com", "ayvs pnsr jumg cdqa");
 					client.Send(mimeMessage);
 					client.Disconnect(true);
 
